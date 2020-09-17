@@ -3,9 +3,12 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+  const doIt =() => (
+    console.log("Press Now")
+  )
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start </Text>
+      <Text onPress={doIt}>Open up App.js to start </Text>
       <StatusBar style="auto" />
     </View>
   );
