@@ -1,6 +1,6 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { View, Text, FlatList, TouchableHighlight } from "react-native";
+import { View, Text, FlatList, TouchableHighlight, Button } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 const availableZipItems = [
@@ -32,6 +32,12 @@ export default function ZipCodeScreen() {
         data={availableZipItems}
         keyExtractor={_keyExtractor}
         renderItem={({ item }) => <ZipItem {...item} navigation={navigation} />}
+      />
+      <Button
+        title="Covid Now"
+        onPress={() => {
+          navigation.navigate("Covid");
+        }}
       />
       <StatusBar style="auto" />
     </View>
