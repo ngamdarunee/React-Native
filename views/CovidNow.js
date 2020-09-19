@@ -29,9 +29,11 @@ const CovidNow = () => {
   return (
     <View style={style.container}>
       <View style={style.circle}>
-        <Text>{CovidData.Hospitalized}</Text>
-        <Text>Now</Text>
+        <Text style={{ fontSize: 50, color: "white" }}>
+          {CovidData.NewConfirmed}
+        </Text>
       </View>
+      <Text>NOW</Text>
     </View>
   );
 };
