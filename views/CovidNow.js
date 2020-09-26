@@ -33,7 +33,7 @@ const CovidNow = () => {
           {CovidData.NewConfirmed}
         </Text>
       </View>
-      <Text style={{ fontSize: 30 }}>NOW</Text>
+      <Text style={{ fontSize: 30 }}>NewConfirmed</Text>
       <View style={style.box}>
         <Text>Confirmed: {CovidData.Confirmed}</Text>
         <Text>Recovered: {CovidData.Recovered}</Text>
@@ -56,13 +56,13 @@ const style = StyleSheet.create({
   circle: {
     width: 100,
     height: 100,
-    backgroundColor: "lightblue",
+    backgroundColor: "#b50f09",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 100,
   },
   box: {
-    backgroundColor: "pink",
+    backgroundColor: "#C11B17",
     height: 200,
     width: 250,
     padding: 22,
