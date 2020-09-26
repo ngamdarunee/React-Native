@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ImageBackground } from "react-native";
 
 const CovidNow = () => {
   const [CovidData, setCovidData] = useState({
@@ -27,26 +27,35 @@ const CovidNow = () => {
       });
   }, []);
   return (
-    <View style={style.container}>
-      <View style={style.circle}>
-        <Text style={{ fontSize: 50, color: "white" }}>
-          {CovidData.NewConfirmed}
-        </Text>
-      </View>
-      <Text style={{ fontSize: 30 }}>NewConfirmed</Text>
-      <View style={style.box}>
-        <Text>Confirmed: {CovidData.Confirmed}</Text>
-        <Text>Recovered: {CovidData.Recovered}</Text>
-        <Text>Hospitalized: {CovidData.Hospitalized}</Text>
-        <Text>Deaths: {CovidData.Deaths}</Text>
-        <Text>NewRecovered: {CovidData.NewRecovered}</Text>
-        <Text>NewDeaths: {CovidData.NewDeaths}</Text>
-      </View>
+    <View>
+      <ImageBackground source={require("../covid.jpg")} style={style.backdrop}>
+        <View style={style.container}>
+          <View style={style.circle}>
+            <Text style={{ fontSize: 50, color: "white" }}>
+              {CovidData.NewConfirmed}
+            </Text>
+          </View>
+          <Text style={{ fontSize: 30, color: "white" }}>NewConfirmed</Text>
+          <View style={style.box}>
+            <Text>Confirmed: {CovidData.Confirmed}</Text>
+            <Text>Recovered: {CovidData.Recovered}</Text>
+            <Text>Hospitalized: {CovidData.Hospitalized}</Text>
+            <Text>Deaths: {CovidData.Deaths}</Text>
+            <Text>NewRecovered: {CovidData.NewRecovered}</Text>
+            <Text>NewDeaths: {CovidData.NewDeaths}</Text>
+          </View>
+        </View>
+      </ImageBackground>
     </View>
   );
 };
 
 const style = StyleSheet.create({
+  backdrop: {
+    alignItems: "center",
+    width: "100%",
+    height: "100%",
+  },
   container: {
     flexDirection: "column",
     flex: 1,
@@ -62,7 +71,7 @@ const style = StyleSheet.create({
     borderRadius: 100,
   },
   box: {
-    backgroundColor: "#C11B17",
+    backgroundColor: "#960d03",
     height: 200,
     width: 250,
     padding: 22,
