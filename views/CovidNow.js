@@ -37,12 +37,16 @@ const CovidNow = () => {
           </View>
           <Text style={{ fontSize: 30, color: "white" }}>NewConfirmed</Text>
           <View style={style.box}>
-            <Text>Confirmed: {CovidData.Confirmed}</Text>
-            <Text>Recovered: {CovidData.Recovered}</Text>
-            <Text>Hospitalized: {CovidData.Hospitalized}</Text>
-            <Text>Deaths: {CovidData.Deaths}</Text>
-            <Text>NewRecovered: {CovidData.NewRecovered}</Text>
-            <Text>NewDeaths: {CovidData.NewDeaths}</Text>
+            <Text style={style.font}>Confirmed: {CovidData.Confirmed} </Text>
+            <Text style={style.font}>Recovered: {CovidData.Recovered}</Text>
+            <Text style={style.font}>
+              Hospitalized: {CovidData.Hospitalized}
+            </Text>
+            <Text style={style.font}>Deaths: {CovidData.Deaths}</Text>
+            <Text style={style.font}>
+              NewRecovered: {CovidData.NewRecovered}
+            </Text>
+            <Text style={style.font}>NewDeaths: {CovidData.NewDeaths}</Text>
           </View>
         </View>
       </ImageBackground>
@@ -77,6 +81,10 @@ const style = StyleSheet.create({
     padding: 22,
     borderRadius: 20,
     justifyContent: "space-evenly",
+  },
+  font: {
+    fontSize: 20,
+    color: "white",
   },
 });
 export default CovidNow;
